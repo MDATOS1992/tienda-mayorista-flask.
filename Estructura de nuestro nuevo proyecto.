@@ -1,0 +1,11 @@
+proyecto_mayorista/
+├─ app.py                    ← tu backend Flask
+├─ requirements.txt          ← dependencias (Flask)
+├─ README.md                 ← breve explicación (opcional pero recomendado)
+├─ .gitignore                ← para NO subir venv, cachés, etc.
+├─ templates/
+│  ├─ index.html             ← tu catálogo (ya lo tenés)
+│  └─ cart.html              ← si lo vas a usar más adelante
+└─ static/
+   ├─ style.css              ← tu CSS
+   └─ script.js              ← tu JS del carrito
