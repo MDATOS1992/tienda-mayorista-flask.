@@ -1,0 +1,51 @@
+<!-- index.html V 1.0 (frontend demo con carrito en JS local) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Mayorista</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Catálogo Mayorista</h1>
+    <nav>
+      <button id="carrito-btn">🛒 Carrito (<span id="carrito-count">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="productos">
+      <div class="producto">
+        <h2>Resma A4 80gr</h2>
+        <p class="precio">$5000</p>
+        <button class="agregar-btn" data-nombre="Resma A4 80gr" data-precio="5000">Agregar</button>
+      </div>
+      <div class="producto">
+        <h2>Lapicera Azul</h2>
+        <p class="precio">$200</p>
+        <button class="agregar-btn" data-nombre="Lapicera Azul" data-precio="200">Agregar</button>
+      </div>
+      <div class="producto">
+        <h2>Carpeta Escolar</h2>
+        <p class="precio">$1500</p>
+        <button class="agregar-btn" data-nombre="Carpeta Escolar" data-precio="1500">Agregar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Carrito -->
+  <div id="carrito-modal" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrar-modal">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito-lista"></ul>
+      <p>Total: $<span id="carrito-total">0</span></p>
+      <button id="vaciar-carrito">Vaciar Carrito</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
